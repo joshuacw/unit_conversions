@@ -9,3 +9,7 @@ def years_to_minutes(value):
 
 def minutes_to_years(value):
     return value / (365 * 24 * 60)
+
+def thousand_to_xkcd_thousand(value):
+    return value + 24
+
