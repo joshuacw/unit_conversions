@@ -2,10 +2,10 @@
 
 #Command line scipt to convert a single number to and from several units
 
-import argparse
+import argparse, webbrowser
 
 from src.convert import kilometers_to_miles, miles_to_kilometers,\
-        years_to_minutes, minutes_to_years
+        years_to_minutes, minutes_to_years, thousand_to_xkcd_thousand
 
 #Parse command line args
 parser = argparse.ArgumentParser()
@@ -29,3 +29,9 @@ print("{0} years is {1} minutes".format(args.value, to_minutes))
 to_years = minutes_to_years(args.value)
 print("{0} minutes is {1} years".format(args.value, to_years))
 
+# thousand to xkcd-thousand
+# easter egg
+if args.value == 1000:
+    to_xkcd_thousand = thousand_to_xkcd_thousand(args.value)
+    print("{0} in our world is equal to {1} in xkcd-land".format(args.value, to_xkcd_thousand))
+    webbrowser.open("http://xkcd.com/1000/")
