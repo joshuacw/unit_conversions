@@ -33,5 +33,5 @@ print("{0} minutes is {1} years".format(args.value, to_years))
 # easter egg
 if args.value == 1000:
     to_xkcd_thousand = thousand_to_xkcd_thousand(args.value)
-    print("{0} in our world is equal to {1} in xkcd-land".format(args.value, to_xkcd_thousand))
+    print("{0} in our world is equal to {1} in xkcd-land".format(to_xkcd_thousand, args.value))
     webbrowser.open("http://xkcd.com/1000/")
